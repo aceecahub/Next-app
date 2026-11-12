@@ -82,7 +82,8 @@ export default function EmployeeListPage() {
 
   // Pencarian karyawan
   const filteredEmployees = employees.filter((employee) =>
-    employee.name.toLowerCase().includes(keyword.toLowerCase()),
+    employee.name.toLowerCase().includes(keyword.toLowerCase())||
+    employee.position.toLowerCase().includes(keyword.toLowerCase()),
   );
 
   const activeEmployees = employees.filter(
