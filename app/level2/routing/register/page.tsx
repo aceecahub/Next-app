@@ -19,7 +19,7 @@ export default function RegisterPage() {
         onSubmit={handleSubmit}
         className="w-full max-w-sm rounded-lg border border-gray-200 bg-white p-8 shadow-sm"
       >
-        <h1 className="mb-6 text-center text-2xl font-bold">Daftar</h1>
+        <h1 className="mb-6 text-center text-2xl font-bold text-black">Daftar</h1>
 
         <div className="mb-4">
           <label className="mb-1 block text-sm font-medium text-gray-700">

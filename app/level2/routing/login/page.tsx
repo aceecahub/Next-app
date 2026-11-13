@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import type { FormEvent } from "react";
 import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
@@ -8,9 +9,9 @@ export default function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  function handleSubmit(e: React.FormEvent) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    router.push("/routing");
+    router.push("/level2/routing");
   }
 
   return (
@@ -19,7 +20,9 @@ export default function LoginPage() {
         onSubmit={handleSubmit}
         className="w-full max-w-sm rounded-lg border border-gray-200 bg-white p-8 shadow-sm"
       >
-        <h1 className="mb-6 text-center text-2xl font-bold">Login</h1>
+        <h1 className="mb-6 text-center text-2xl font-bold text-black">
+          Login
+        </h1>
 
         <div className="mb-4">
           <label className="mb-1 block text-sm font-medium text-gray-700">
@@ -55,7 +58,7 @@ export default function LoginPage() {
         >
           Login
         </button>
-         {/* Tambah ini */}
+        {/* Tambah ini */}
         <p className="mt-4 text-center text-sm text-gray-500">
           Belum punya akun?{" "}
           <button
